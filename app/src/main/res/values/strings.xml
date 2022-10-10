@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Foodly</string>
+    <string name="your_first_two_orders_underlined"> <u>Your first two orders</u></string>
+</resources>
