@@ -4,13 +4,32 @@ import android.os.Bundle
 import android.os.PersistableBundle
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
 class MainActivity: AppCompatActivity() {
+
+    private var layoutManager: RecyclerView.LayoutManager? = null
+    private var adapter: RecyclerView.Adapter<MenuActivityMainRecyclerViewAdapter.ViewHolder> ?= null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        getWindow().setFlags(
+        window.setFlags(
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
-            WindowManager.LayoutParams.FLAG_FULLSCREEN);
+            WindowManager.LayoutParams.FLAG_FULLSCREEN)
         setContentView(R.layout.activity_main)
+
+        layoutManager = LinearLayoutManager(this)
+
+        val recyclerView: RecyclerView = findViewById(R.id.recyclerView_activity_main)
+        adapter = MenuActivityMainRecyclerViewAdapter()
+
+        recyclerView.layoutManager = layoutManager
+        recyclerView.adapter = adapter
+
     }
+
+
+
+
 }

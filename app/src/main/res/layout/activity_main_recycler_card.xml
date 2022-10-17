@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardViewRecyclerActivityMain"
+    android:elevation="10dp"
+    app:cardCornerRadius="5dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imgRecyclerViewCardView"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:src="@drawable/fries_img"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/txtRecyclerViewCardViewName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/imgRecyclerViewCardView"
+        android:text="Jack in the box(3199(El Camono Real))"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/txtRecyclerViewCardViewDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/txtRecyclerViewCardViewName"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/source_serif_pro"
+        android:text="$. American . Burger . Fast Food"/>
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtRecyclerViewCardViewDescription">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_margin="3dp">
+
+            <Button
+                android:id="@+id/btnRecyclerViewCardViewTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/txtRecyclerViewCardViewDescription"
+                android:backgroundTint="@color/white"
+                android:text="30-40 mins"
+                android:textColor="@color/black"/>
+
+            <Button
+                android:id="@+id/btnRecyclerViewCardViewRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/txtRecyclerViewCardViewDescription"
+                android:backgroundTint="@color/white"
+                android:text="4.0 * (100)"
+                android:textColor="@color/black"
+                android:layout_marginStart="11dp"/>
+            <Button
+                android:id="@+id/btnRecyclerViewCardViewAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/txtRecyclerViewCardViewDescription"
+                android:backgroundTint="@color/white"
+                android:text="$1.99 $ 0 Delivery"
+                android:textColor="@color/black"
+                android:layout_marginStart="11dp"/>
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <ImageView
+        android:id="@+id/imgMessageIcon"
+        android:layout_width="27dp"
+        android:layout_height="27dp"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/message_icon"
+        android:layout_marginTop="13dp"/>
+
+    <TextView
+        android:id="@+id/txtRecyclerCardViewReview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imgMessageIcon"
+        android:text="People say: Well Packed"
+        app:layout_constraintTop_toBottomOf="@id/horizontalScrollView"
+        android:layout_marginTop="13dp"
+        android:layout_marginStart="5dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
