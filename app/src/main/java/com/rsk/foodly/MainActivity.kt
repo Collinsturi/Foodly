@@ -22,10 +22,15 @@ class MainActivity: AppCompatActivity() {
         layoutManager = LinearLayoutManager(this)
 
         val recyclerView: RecyclerView = findViewById(R.id.recyclerView_activity_main)
-        adapter = MenuActivityMainRecyclerViewAdapter()
 
+        val data = activity_main_menu_data()
+        adapter = MenuActivityMainRecyclerViewAdapter(data)
         recyclerView.layoutManager = layoutManager
+
         recyclerView.adapter = adapter
+        //adding an onClickListner to each ViewHolder on the recycler View
+       // (adapter as MenuActivityMainRecyclerViewAdapter).setOnItemClickListener()
+
 
     }
 

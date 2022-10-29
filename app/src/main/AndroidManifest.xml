@@ -26,20 +26,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".Contacts"
-            android:parentActivityName=".GetStarted"
-            android:exported="false">
-        </activity>
-        <activity
-            android:name=".EmailAddress"
-            android:exported="false"
-            android:parentActivityName=".Contacts"/>
-        <activity android:name=".AccountPassword"
-            android:exported="false"
-            android:parentActivityName=".EmailAddress"/>
         <activity android:name=".MainActivity"
             android:exported="false"/>
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

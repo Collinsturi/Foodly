@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/getStartedFragment">
+
+    <fragment
+        android:id="@+id/getStartedFragment"
+        android:name="com.rsk.foodly.GetStartedFragment"
+        android:label="GetStartedFragment" >
+        <action
+            android:id="@+id/action_getStartedFragment_to_contactsFragment"
+            app:destination="@id/contactsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/accountPasswordFragment"
+        android:name="com.rsk.foodly.AccountPasswordFragment"
+        android:label="AccountPasswordFragment" />
+    <fragment
+        android:id="@+id/contactsFragment"
+        android:name="com.rsk.foodly.ContactsFragment"
+        android:label="ContactsFragment" >
+        <action
+            android:id="@+id/action_contactsFragment_to_emailAddressFragment"
+            app:destination="@id/emailAddressFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/emailAddressFragment"
+        android:name="com.rsk.foodly.EmailAddressFragment"
+        android:label="EmailAddressFragment" >
+        <action
+            android:id="@+id/action_emailAddressFragment_to_accountPasswordFragment"
+            app:destination="@id/accountPasswordFragment" />
+    </fragment>
+</navigation>

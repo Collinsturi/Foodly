@@ -15,9 +15,5 @@ class GetStarted : AppCompatActivity() {
 
         setContentView(R.layout.activity_get_started)
 
-        val btnGetStarted : Button = findViewById(R.id.btnGetStarted)
-        btnGetStarted.setOnClickListener{
-            startActivity(Intent(this, Contacts::class.java))
-        }
     }
 }

@@ -9,12 +9,18 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 
-class MenuActivityMainRecyclerViewAdapter: RecyclerView.Adapter<MenuActivityMainRecyclerViewAdapter.ViewHolder>() {
+class MenuActivityMainRecyclerViewAdapter(var data: activity_main_menu_data): RecyclerView.Adapter<MenuActivityMainRecyclerViewAdapter.ViewHolder>() {
 
-    var data = activity_main_menu_data()
+   // private lateinit var mlistener: onItemClickListener
+
+    interface  onItemClickListener{
+        fun onItemClick(position: Int)
+    }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.activity_main_recycler_card, parent, false)
 
+       // return ViewHolder(view, mlistener)
         return ViewHolder(view)
     }
 
@@ -33,7 +39,7 @@ class MenuActivityMainRecyclerViewAdapter: RecyclerView.Adapter<MenuActivityMain
         return data.productName.size
     }
 
-    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         var image: ImageView
         var productName: TextView
         var productDescription: TextView
@@ -50,6 +56,10 @@ class MenuActivityMainRecyclerViewAdapter: RecyclerView.Adapter<MenuActivityMain
             btnRatingString = itemView.findViewById(R.id.btnRecyclerViewCardViewRating)
             btnAmountText = itemView.findViewById(R.id.btnRecyclerViewCardViewAmount)
             reviewText = itemView.findViewById(R.id.txtRecyclerCardViewReview)
+
+//            itemView.setOnClickListener {
+//                listener.onItemClick(adapterPosition)
+//            }
         }
 
     }
