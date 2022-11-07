@@ -18,7 +18,8 @@ class AccountPasswordFragment : Fragment() {
 
         val btnAccountPasswordNextFrag: Button = view.findViewById(R.id.btnContinueAccountPassword)
         btnAccountPasswordNextFrag.setOnClickListener{
-            startActivity(Intent(view.context, MainActivity::class.java))
+            view.findNavController().navigate(R.id.action_accountPasswordFragment_to_locationFragment)
+            //startActivity(Intent(view.context, MainActivity::class.java))
         }
         return view
     }

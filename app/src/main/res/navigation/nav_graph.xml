@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
     app:startDestination="@id/getStartedFragment">
 
@@ -15,7 +16,11 @@
     <fragment
         android:id="@+id/accountPasswordFragment"
         android:name="com.rsk.foodly.AccountPasswordFragment"
-        android:label="AccountPasswordFragment" />
+        android:label="AccountPasswordFragment" >
+        <action
+            android:id="@+id/action_accountPasswordFragment_to_locationFragment"
+            app:destination="@id/locationFragment" />
+    </fragment>
     <fragment
         android:id="@+id/contactsFragment"
         android:name="com.rsk.foodly.ContactsFragment"
@@ -32,4 +37,9 @@
             android:id="@+id/action_emailAddressFragment_to_accountPasswordFragment"
             app:destination="@id/accountPasswordFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/locationFragment"
+        android:name="com.rsk.foodly.LocationFragment"
+        android:label="fragment_location"
+        tools:layout="@layout/fragment_location" />
 </navigation>

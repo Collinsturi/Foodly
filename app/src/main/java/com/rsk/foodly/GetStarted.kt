@@ -1,17 +1,18 @@
 package com.rsk.foodly
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.WindowManager
-import android.widget.Button
+import androidx.activity.viewModels
+import com.rsk.foodly.viewmodel.GetStartedViewModel
 
 class GetStarted : AppCompatActivity() {
+
+    private val viewModel: GetStartedViewModel by viewModels()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        getWindow().setFlags(
-            WindowManager.LayoutParams.FLAG_FULLSCREEN,
-            WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
+        setTheme(R.style.Theme_Foodly)
 
         setContentView(R.layout.activity_get_started)
 

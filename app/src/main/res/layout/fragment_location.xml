@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".LocationFragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Find food near you"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:layout_marginTop="80dp"
+        android:layout_marginStart="15dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="We need to know your address in order to find you"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="15dp"
+        android:hint="Enter address"
+        android:inputType="text"
+        android:textSize="15sp">
+        <EditText
+            android:id="@+id/input_email"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textEmailAddress" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+</LinearLayout>
