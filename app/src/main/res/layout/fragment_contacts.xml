@@ -13,16 +13,6 @@
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="0dp" />
 
-    <ImageButton
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="28dp"
-        android:src="@drawable/ic_baseline_cancel_24"
-        android:backgroundTint="@color/white"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -49,18 +39,18 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <EditText
-            android:id="@+id/phoneNumber"
-            android:hint="Mobile Number"
+            android:id="@+id/edtTxtphoneNumber"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="0dp"
+            android:hint="Mobile Number"
+            android:inputType="number"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:inputType="number"/>
+            app:layout_constraintStart_toStartOf="parent" />
 
 
-        <ImageView
+        <ImageButton
             android:id="@+id/imageViewMobileNumber"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -68,7 +58,7 @@
             android:layout_marginEnd="-1dp"
             android:clickable="true"
             android:focusable="true"
-            android:paddingEnd="4dp"
+            android:padding="1dp"
             android:src="@drawable/custom_next_button" />
 
     </RelativeLayout>
