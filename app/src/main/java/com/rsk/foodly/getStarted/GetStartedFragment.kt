@@ -1,13 +1,12 @@
-package com.rsk.foodly
+package com.rsk.foodly.getStarted
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import android.widget.Button
 import androidx.navigation.findNavController
+import com.rsk.foodly.mainscreen.MainActivity
+import com.rsk.foodly.R
 import com.rsk.foodly.databinding.FragmentGetStartedBinding
 
 class GetStartedFragment : Fragment(R.layout.fragment_get_started) {
@@ -19,7 +18,7 @@ class GetStartedFragment : Fragment(R.layout.fragment_get_started) {
         binding = FragmentGetStartedBinding.bind(view)
 
         binding.btnSkip.setOnClickListener {
-            startActivity(Intent(view.context,MainActivity::class.java))
+            startActivity(Intent(view.context, MainActivity::class.java))
         }
 
         binding.btnGetStarted.setOnClickListener{

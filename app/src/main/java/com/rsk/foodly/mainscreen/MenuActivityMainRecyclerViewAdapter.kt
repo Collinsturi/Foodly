@@ -1,4 +1,4 @@
-package com.rsk.foodly
+package com.rsk.foodly.mainscreen
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,6 +7,7 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.rsk.foodly.R
 
 
 class MenuActivityMainRecyclerViewAdapter(var data: activity_main_menu_data): RecyclerView.Adapter<MenuActivityMainRecyclerViewAdapter.ViewHolder>() {

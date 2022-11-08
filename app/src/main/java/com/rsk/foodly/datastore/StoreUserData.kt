@@ -2,23 +2,29 @@ package com.rsk.foodly.datastore
 
 import android.content.Context
 import androidx.datastore.core.DataStore
+import androidx.datastore.dataStore
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.intPreferencesKey
 import androidx.datastore.preferences.core.stringPreferencesKey
 import androidx.datastore.preferences.preferencesDataStore
+import com.rsk.foodly.constUSER_EMAIL
+import com.rsk.foodly.constUSER_LOCATION
+import com.rsk.foodly.constUSER_MOBILE_NUMBER
+import com.rsk.foodly.constUSER_PASSWORD
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.map
+
 
 class StoreUserData(private val context: Context) {
 
     companion object{
         private val Context.datastore: DataStore<Preferences> by preferencesDataStore("User data")
-        val USER_MOBILE_NUMBER = intPreferencesKey("user_mobile_number")
-        val USER_EMAIL = stringPreferencesKey("user_email")
-        val USER_PASSWORD = stringPreferencesKey("account_password")
-        val USER_LOCATION = stringPreferencesKey("user_location")
+        val USER_MOBILE_NUMBER = intPreferencesKey(constUSER_MOBILE_NUMBER)
+        val USER_EMAIL = stringPreferencesKey(constUSER_EMAIL)
+        val USER_PASSWORD = stringPreferencesKey(constUSER_PASSWORD)
+        val USER_LOCATION = stringPreferencesKey(constUSER_LOCATION)
     }
 
     val getUserMobileNumber: Flow<Int> = context.datastore.data
@@ -26,9 +32,16 @@ class StoreUserData(private val context: Context) {
             preferences[USER_MOBILE_NUMBER] ?: 0
         }
 
-    suspend fun saveUserMobileNumber(number: Int){
+    suspend fun getUserMobileNumber(key: String):Int?{
+        val datastorekey = intPreferencesKey(key)
+        val preferences = context.datastore.data.first()
+
+        return preferences[datastorekey]
+    }
+
+    suspend fun saveUserMobileNumber(number: Int?){
         context.datastore.edit {userData ->
-            userData[USER_MOBILE_NUMBER] = number
+            userData[USER_MOBILE_NUMBER] = number ?: 0
         }
     }
 

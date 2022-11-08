@@ -1,4 +1,4 @@
-package com.rsk.foodly
+package com.rsk.foodly.mainscreen
 
 import android.widget.ImageView
 

@@ -21,7 +21,7 @@
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:backgroundTint="@android:color/transparent"/>
+        android:background="@android:color/transparent"/>
 
     <TextView
         android:layout_width="216dp"

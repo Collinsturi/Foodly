@@ -1,11 +1,10 @@
-package com.rsk.foodly
+package com.rsk.foodly.mainscreen
 
 import android.os.Bundle
-import android.os.PersistableBundle
-import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.rsk.foodly.R
 
 class MainActivity: AppCompatActivity() {
 
@@ -26,7 +25,7 @@ class MainActivity: AppCompatActivity() {
         recyclerView.layoutManager = layoutManager
 
         recyclerView.adapter = adapter
-        //adding an onClickListner to each ViewHolder on the recycler View
+        //adding an onClickListener to each ViewHolder on the recycler View
        // (adapter as MenuActivityMainRecyclerViewAdapter).setOnItemClickListener()
 
 

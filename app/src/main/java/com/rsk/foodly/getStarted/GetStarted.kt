@@ -1,8 +1,9 @@
-package com.rsk.foodly
+package com.rsk.foodly.getStarted
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
+import com.rsk.foodly.R
 import com.rsk.foodly.viewmodel.GetStartedViewModel
 
 class GetStarted : AppCompatActivity() {

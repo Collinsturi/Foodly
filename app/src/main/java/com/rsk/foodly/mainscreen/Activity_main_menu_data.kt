@@ -1,9 +1,13 @@
-package com.rsk.foodly
+package com.rsk.foodly.mainscreen
+
+import com.rsk.foodly.R
 
 class activity_main_menu_data {
 
-     var image = arrayOf(R.drawable.fries_img,  R.mipmap.ic_launcher, R.mipmap.ic_launcher,
-         R.mipmap.ic_launcher, R.mipmap.ic_launcher)
+     var image = arrayOf(
+         R.drawable.fries_img, R.mipmap.ic_launcher, R.mipmap.ic_launcher,
+         R.mipmap.ic_launcher, R.mipmap.ic_launcher
+     )
 
     var productName = arrayOf("Fries", "Burgers", "Pizza", "Sandwich", "Waffles")
 

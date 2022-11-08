@@ -14,7 +14,7 @@
         android:theme="@style/Theme.App.Starting"
         tools:targetApi="31">
         <activity
-            android:name=".GetStarted"
+            android:name=".getStarted.GetStarted"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,7 +22,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"
+        <activity android:name=".mainscreen.MainActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Foodly"/>
+
+        <activity android:name=".PushNotificationsActivity"
             android:exported="false"
             android:theme="@style/Theme.Foodly"/>
 

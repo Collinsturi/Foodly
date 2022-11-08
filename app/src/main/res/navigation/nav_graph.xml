@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/getStartedFragment"
-        android:name="com.rsk.foodly.GetStartedFragment"
+        android:name="com.rsk.foodly.getStarted.GetStartedFragment"
         android:label="GetStartedFragment" >
         <action
             android:id="@+id/action_getStartedFragment_to_contactsFragment"
@@ -15,7 +15,7 @@
     </fragment>
     <fragment
         android:id="@+id/accountPasswordFragment"
-        android:name="com.rsk.foodly.AccountPasswordFragment"
+        android:name="com.rsk.foodly.getStarted.AccountPasswordFragment"
         android:label="AccountPasswordFragment" >
         <action
             android:id="@+id/action_accountPasswordFragment_to_locationFragment"
@@ -23,7 +23,7 @@
     </fragment>
     <fragment
         android:id="@+id/contactsFragment"
-        android:name="com.rsk.foodly.ContactsFragment"
+        android:name="com.rsk.foodly.getStarted.ContactsFragment"
         android:label="ContactsFragment" >
         <action
             android:id="@+id/action_contactsFragment_to_emailAddressFragment"
@@ -31,7 +31,7 @@
     </fragment>
     <fragment
         android:id="@+id/emailAddressFragment"
-        android:name="com.rsk.foodly.EmailAddressFragment"
+        android:name="com.rsk.foodly.getStarted.EmailAddressFragment"
         android:label="EmailAddressFragment" >
         <action
             android:id="@+id/action_emailAddressFragment_to_accountPasswordFragment"
@@ -39,7 +39,7 @@
     </fragment>
     <fragment
         android:id="@+id/locationFragment"
-        android:name="com.rsk.foodly.LocationFragment"
+        android:name="com.rsk.foodly.getStarted.LocationFragment"
         android:label="fragment_location"
         tools:layout="@layout/fragment_location" />
 </navigation>
